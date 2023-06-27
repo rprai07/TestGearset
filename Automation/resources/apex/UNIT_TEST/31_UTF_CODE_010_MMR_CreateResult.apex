@@ -1,0 +1,11 @@
+GHI_UTF_MMROrderProcessing.createOrder();
+GHI_UTF_MMROrderProcessing.createOrderRole('Ordering');
+GHI_UTF_MMROrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_MMROrderProcessing.processOrder($orderId);
+GHI_UTF_MMROrderProcessing.closePreBillingCase($orderId);
+GHI_UTF_MMROrderProcessing.createPackage($orderId);
+GHI_UTF_MMROrderProcessing.closeSpecArrivalCase($orderId);
+GHI_UTF_MMROrderProcessing.createSpecimen($orderId);
+GHI_UTF_MMROrderProcessing.createResult($orderId);
+List<OSM_Result__c> results = [Select Id from OSM_Result__c where Order_ID__c = :$orderId];
+System.assert(results.size()>0);

@@ -1,0 +1,17 @@
+GHI_UTF_IBCOrderProcessing.createOrder();
+GHI_UTF_IBCOrderProcessing.createOrderRole('Ordering');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_IBCOrderProcessing.createOrderItem('Colon');
+GHI_UTF_IBCOrderProcessing.createOrderItem('DCIS');
+GHI_UTF_IBCOrderProcessing.updateOLI($orderId,0);
+GHI_UTF_IBCOrderProcessing.updateOLI($orderId,1);
+GHI_UTF_IBCOrderProcessing.updateOLI($orderId,2);
+GHI_UTF_IBCOrderProcessing.processOrder($orderId);
+List<Case> cecaselist = [Select Id, CaseNumber, Description, OSM_Primary_Order__c, Type from Case where Type = 'Clinical Experience' AND OSM_Primary_Order__c=:$orderId];
+System.assert(cecaselist.size() == 1);
+List<OrderItem> olis = [Select OSM_Order_Line_Item_ID__c from OrderItem where OrderId =:$orderId];
+String description = cecaselist[0].Description;
+Boolean assertion1 = description.Contains(olis[0].OSM_Order_Line_Item_ID__c);
+Boolean assertion2 = description.Contains(olis[1].OSM_Order_Line_Item_ID__c);
+Boolean assertion3 = description.Contains(olis[2].OSM_Order_Line_Item_ID__c);
+System.assert(assertion1 && assertion2 && assertion3);

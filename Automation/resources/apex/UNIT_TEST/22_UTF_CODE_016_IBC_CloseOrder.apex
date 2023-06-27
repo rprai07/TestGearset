@@ -1,0 +1,14 @@
+GHI_UTF_IBCOrderProcessing.createOrder();
+GHI_UTF_IBCOrderProcessing.createOrderRole('Ordering');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_IBCOrderProcessing.processOrder($orderId);
+GHI_UTF_IBCOrderProcessing.createPackage($orderId);
+GHI_UTF_IBCOrderProcessing.closeSpecArrivalCase($orderId);
+GHI_UTF_IBCOrderProcessing.closePreBillingCase($orderId);
+GHI_UTF_IBCOrderProcessing.createSpecimen($orderId);
+GHI_UTF_IBCOrderProcessing.createResult($orderId);
+GHI_UTF_IBCOrderProcessing.updateOLIToDVC($orderId);
+GHI_UTF_IBCOrderProcessing.createDistributionEvent($orderId);
+Order ord= [Select OSM_Status__c from order where Id =:$orderId];
+System.assertEquals('Closed', ord.OSM_Status__c);
+//System.assert($orderId != null);

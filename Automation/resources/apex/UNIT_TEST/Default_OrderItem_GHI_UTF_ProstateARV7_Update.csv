@@ -1,0 +1,2 @@
+OSM_Billing_Diagnosis_Code__c,AR_V7_Clinical_Stage__c,AR_V7_Castrate_Resistant_Prostate_Cancer__c,AR_V7_Date_of_PSA_Test__c,AR_V7_Date_of_Last_Visit__c,AR_V7_Prior_Therapies__c,AR_V7_Results_of_Most_Recent_PSA__c,AR_V7_StageIV_Castrate_Resist_PC__c, AR_V7_Required_Therapies_With_mCRPC__c
+'Prostate-AR-V7 C61 prostate','IV','Yes',Date.valueOf('1999-10-11'),Date.valueOf('2007-10-11'),'Abiraterone',1.0, 'Yes', 'Yes'

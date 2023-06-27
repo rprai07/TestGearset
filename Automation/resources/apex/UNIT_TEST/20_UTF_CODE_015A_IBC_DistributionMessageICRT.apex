@@ -1,0 +1,13 @@
+GHI_UTF_IBCOrderProcessing.createOrder();
+GHI_UTF_IBCOrderProcessing.createOrderRole('Ordering');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_IBCOrderProcessing.processOrder($orderId);
+GHI_UTF_IBCOrderProcessing.closePreBillingCase($orderId);
+GHI_UTF_IBCOrderProcessing.createPackage($orderId);
+GHI_UTF_IBCOrderProcessing.closeSpecArrivalCase($orderId);
+GHI_UTF_IBCOrderProcessing.createSpecimen($orderId);
+GHI_UTF_IBCOrderProcessing.createResult($orderId);
+GHI_UTF_IBCOrderProcessing.updateOLIToDVC($orderId);
+Order ord = [Select OrderNumber from Order where id= :$orderId];
+List<ICRT_Message_Log__c> renanddist = [Select Id from ICRT_Message_Log__c where ICRT_Message_Type__c = 'RenderAndDistributeDataMessage' and ICRT_Object_ID__c= :ord.OrderNumber ];
+System.assert(renanddist.size()>0);

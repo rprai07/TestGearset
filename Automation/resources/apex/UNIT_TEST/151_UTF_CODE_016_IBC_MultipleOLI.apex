@@ -1,0 +1,15 @@
+GHI_UTF_IBCOrderProcessing.createOrder();
+GHI_UTF_IBCOrderProcessing.createOrderRole('Ordering');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Additional Report Receiver');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Additional Report Receiver');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Additional Report Receiver');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Additional Report Receiver');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Additional Report Receiver');
+GHI_UTF_IBCOrderProcessing.createOrderItem('Colon');
+GHI_UTF_IBCOrderProcessing.createOrderItem('DCIS');
+GHI_UTF_IBCOrderProcessing.processOrder($orderId);
+GHI_UTF_IBCOrderProcessing.updateOLI($orderId,1);
+GHI_UTF_IBCOrderProcessing.updateOLI($orderId,2);
+GHI_UTF_IBCOrderProcessing.updateOrder($orderId);
+System.assert($orderId != Null);

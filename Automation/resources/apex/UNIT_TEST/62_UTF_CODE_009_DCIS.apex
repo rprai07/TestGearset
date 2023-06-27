@@ -1,0 +1,11 @@
+GHI_UTF_DCISOrderProcessing.createOrder();
+GHI_UTF_DCISOrderProcessing.createOrderRole('Ordering');
+GHI_UTF_DCISOrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_DCISOrderProcessing.processOrder($orderId);
+GHI_UTF_DCISOrderProcessing.closePreBillingCase($orderId);
+GHI_UTF_DCISOrderProcessing.createPackage($orderId);
+GHI_UTF_DCISOrderProcessing.closeSpecArrivalCase($orderId);
+GHI_UTF_DCISOrderProcessing.closeClinicalExperienceCase($orderId);
+GHI_UTF_DCISOrderProcessing.createSpecimen($orderId);
+List<OSM_Order_Specimen__c> specimen = [Select Id from OSM_Order_Specimen__c where OSM_Order__c = :$orderId];
+System.assert(specimen.size()>0);

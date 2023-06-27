@@ -1,0 +1,10 @@
+GHI_UTF_ProstateARV7OrderProcessing.createOrder();
+GHI_UTF_ProstateARV7OrderProcessing.createOrderRole('Ordering');
+GHI_UTF_ProstateARV7OrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_ProstateARV7OrderProcessing.processOrder($orderId);
+GHI_UTF_ProstateARV7OrderProcessing.closePreBillingCase($orderId);
+GHI_UTF_ProstateARV7OrderProcessing.createPackage($orderId);
+GHI_UTF_ProstateARV7OrderProcessing.closeSpecArrivalCase($orderId);
+GHI_UTF_ProstateARV7OrderProcessing.createSpecimen($orderId);
+List<OSM_Order_Specimen__c> specimen = [Select Id from OSM_Order_Specimen__c where OSM_Order__c = :$orderId];
+System.assert(specimen.size()>0);

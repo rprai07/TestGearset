@@ -1,0 +1,10 @@
+GHI_UTF_ApttusAutomation.createPayorAccount(); 
+GHI_UTF_ApttusAutomation.approvePayor($payorId);
+GHI_UTF_ApttusAutomation.createAgreement($payorId);
+GHI_UTF_ApttusAutomation.createAgreementLineItems('IBC');
+GHI_UTF_ApttusAutomation.submitALIforApproval($aliId);
+GHI_UTF_ApttusAutomation.approveALI($aliId);
+GHI_UTF_ApttusAutomation.syncPTPandALI($payorId);
+GHI_UTF_ApttusAutomation.createPlan();
+GHI_UTF_ApttusAutomation.updatePricingToPlan($planId);
+GHI_UTF_ApttusAutomation.generateDefaultPTV($payorId);

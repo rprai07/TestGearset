@@ -1,0 +1,2 @@
+FirstName ,LastName ,RecordTypeId ,OSM_HCP_NPI__c ,OSM_Specialty__c ,OSM_Custom_Salutation__c ,Salutation ,MailingCountry ,OSM_Country_Code__c,OSM_Status__c
+'HCPFirst_UnitTest','HCPLast_UnitTest','HCP','NPI_1','Urologist','Mr.','Mr.','USA','USA','Approved'

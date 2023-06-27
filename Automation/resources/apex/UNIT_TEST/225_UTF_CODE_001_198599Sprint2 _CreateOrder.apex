@@ -1,0 +1,13 @@
+GHI_UTF_IBCOrderProcessing.createOrder(); 
+GHI_UTF_IBCOrderProcessing.createOrderRole('Ordering');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_IBCOrderProcessing.processOrder($orderId); 
+GHI_UTF_IBCOrderProcessing.closePreBillingCase($orderId);
+Case retrievalCase = [Select Id, CaseNumber from Case where OSM_Primary_Order__c =:$orderId AND Type = 'Specimen Retrieval' limit 1];
+OSM_Package__c pkg = new OSM_Package__c();
+pkg.Name = 'PKG_'+$orderId;
+pkg.OSM_SR_Barcode__c = retrievalCase.CaseNumber;
+pkg.OSM_Order_Screening__c = true;
+pkg.OSM_Specimen_Screening__c = true;
+insert pkg;
+System.assert(retrievalCase != null);
