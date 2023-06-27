@@ -1,0 +1,10 @@
+GHI_UTF_IBCOrderProcessing.createOrder();
+GHI_UTF_IBCOrderProcessing.createOrderRole('Ordering');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_IBCOrderProcessing.processOrder($orderId); 
+List<OrderItem> olis = [Select Id, OrderItemNumber from OrderItem where OrderId = :$orderId];
+Order ord = [Select Id, OrderNumber from Order where Id = :$orderId];
+System.debug('ord--->'+ord.OrderNumber);
+List<ICRT_Message_Log__c> icrtLogsODM = [Select Id, ICRT_Message_Direction__c, ICRT_Object_ID__c, ICRT_Message_Type__c from ICRT_Message_Log__c where ICRT_Message_Type__c ='OrderDataMessage' and ICRT_Object_ID__c like :ord.OrderNumber];
+System.debug('ord icrtLogsODM--->'+icrtLogsODM);
+System.assert(icrtLogsODM.size()>0);

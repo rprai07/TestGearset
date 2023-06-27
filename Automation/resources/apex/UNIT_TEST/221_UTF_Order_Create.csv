@@ -1,0 +1,2 @@
+OSM_Product__c,OSM_Channel__c,OSM_Specimen_Retrieval_Option__c,OSM_Signature_Date__c,OSM_Bill_Type__c,OSM_Triage_Outcome__c,EffectiveDate,Status,OSM_PCDx_Cancer_Type__c,OSM_PCDx_Other_Cancer_Type__c
+'IBC','Fax','GHI to Request',Date.valueOf('1983-10-11'),'Private Insurance','New',date.today(),'New','NSCLC', 'Testing'

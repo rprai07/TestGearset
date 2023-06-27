@@ -1,0 +1,10 @@
+GHI_UTF_IBCOrderProcessing.createOrder();
+GHI_UTF_IBCOrderProcessing.createOrderRole('Ordering');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Partner');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Additional Report Receiver');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Billing');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Diagnosing');
+GHI_UTF_IBCOrderProcessing.createOrderItem('Colon');
+GHI_UTF_IBCOrderProcessing.updateOLI($orderId,1);
+System.assert($orderId != Null);

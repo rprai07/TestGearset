@@ -1,0 +1,2 @@
+Name,RecordTypeId,Apttus__Contract_Start_Date__c,GHI_CLM_Effective_Date__c,Apttus__Contract_End_Date__c,Apttus__Status_Category__c,Apttus__Status__c
+'Payor Agreement1','International Private',Date.today().addDays(-5),Date.today(),Date.today().addDays(5),'In Effect','Activated'

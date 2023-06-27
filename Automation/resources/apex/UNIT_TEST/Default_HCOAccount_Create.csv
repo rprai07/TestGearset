@@ -1,0 +1,2 @@
+Name,BillingCountry,BillingStreet,BillingCity,BillingState,BillingPostalCode,OSM_Specialty__c,Phone,Fax,OSM_HCO_NPI__c,OSM_Country_Code__c,RecordTypeId,OSM_Status__c,OSM_Customer_Service_Team__c,OSM_Delivery_method_of_report__c,OSM_Always_Receive_Report__c,OSM_Report_Language_override__c,OSM_Language_Preference__c,OSM_Address_Attn_To__c
+'Acct12345678','United States','123','Redwood City','California','94063','History','(650) 556-0122','+16505560122','npi1','US','HCO','Approved','Domestic','Fax',true,true,'English','AT'

@@ -1,0 +1,2 @@
+OSM_Billing_Diagnosis_Code__c,OSM_NCCN_Risk_Category__c,OSM_HCP_Provided_Gleason_Score__c,OSM_HCP_Provided_PSA_ngmL__c,OSM_HCP_Provided_Clinical_Stage__c,OSM_Prostate_Volume_cc__c,OSM_NCCN_Qualification_Status__c,OSM_Number_of_Cores_Collected__c,OSM_HCP_Provided_No_of_Positive_Cores__c,OSM_Max_of_tumor_involvement_in_any_core__c,OSM_NCCN_Override__c,OSM_NCCN_Override_Reason__c
+'Prostate C61 prostate','Low Risk','3+3',2.0,'T1c',1,'Data Missing',1,1,'',true,'Repeat Biopsy Physician Provided'

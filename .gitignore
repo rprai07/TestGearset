@@ -1,0 +1,26 @@
+*.sublime-workspace
+*.local_store
+*.json
+/salesforce.schema
+/.project
+*.log
+*.xml
+.forceCode/akoleszar@genomichealth.com.dev64/.sfdx/typings/lwc/schema.d.ts
+.forceCode/akoleszar@genomichealth.com.dev64/.sfdx/tools/apex.db
+.forceCode/akoleszar@genomichealth.com.dev64/.sfdx/typings/lwc/apex.d.ts
+.forceCode/akoleszar@genomichealth.com.dev64/.sfdx/typings/lwc/customlabels.d.ts
+.forceCode/akoleszar@genomichealth.com.dev64/.sfdx/typings/lwc/engine.d.ts
+.forceCode/akoleszar@genomichealth.com.dev64/.sfdx/typings/lwc/lds.d.ts
+.forceCode/akoleszar@genomichealth.com.dev64/.sfdx/typings/lwc/staticresources.d.ts
+.forceCode/akoleszar@genomichealth.com.dev64/.sfdx/typings/lwc/user.d.ts
+.sfdx
+.vim-force.com/session.properties
+CICD Source/CICDAutomation/.project
+dev40/.eslintignore
+dev40/.forceignore
+dev40/.prettierignore
+dev40/.prettierrc
+dev40/README.md
+dev40/scripts/apex/hello.apex
+dev40/scripts/soql/account.soql
+CICD Source/CICDAutomation/.project

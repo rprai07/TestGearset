@@ -1,0 +1,14 @@
+GHI_UTF_IBCOrderProcessing.createOrder();
+GHI_UTF_IBCOrderProcessing.createOrderRole('Ordering');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_IBCOrderProcessing.createOrderItem('Colon');
+GHI_UTF_IBCOrderProcessing.createOrderItem('DCIS');
+GHI_UTF_IBCOrderProcessing.updateOLI($orderId,0);
+GHI_UTF_IBCOrderProcessing.updateOLI($orderId,1);
+GHI_UTF_IBCOrderProcessing.updateOLI($orderId,2);
+GHI_UTF_IBCOrderProcessing.processOrder($orderId);
+List<Case> cecaselist = [Select Id, CaseNumber, OSM_Primary_Order__c, Type from Case where Type = 'Clinical Experience' AND OSM_Primary_Order__c=:$orderId];
+System.assert(cecaselist.size() > 0);
+Order currOrd = [Select Id, OrderNumber from Order where Id=:$orderId];
+List<ICRT_Message_Log__c> logs = [SELECT Id, ICRT_Object_ID__c, ICRT_Message_Type__c FROM ICRT_Message_Log__c Where (ICRT_Object_ID__c =:cecaselist[0].CaseNumber OR ICRT_Object_ID__c = :currOrd.OrderNumber) AND (ICRT_Message_Type__c ='CaseDataMessage' OR ICRT_Message_Type__c='OrderDataMessage')];
+System.assert(logs.size() == 2);

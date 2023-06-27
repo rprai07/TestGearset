@@ -1,0 +1,2 @@
+LastName,RecordTypeId,OSM_Gender__c ,birthdate ,OSM_Country_Code__c,OSM_Status__c,GHI_First_Name_Prot__c,GHI_Last_Name_Prot__c,GHI_Birthdate_Prot__c
+'FemalePatientLast_UnitTest','Patient','Female',Date.valueOf('1983-10-11'),'USA', 'Approved','FemalePatientFirst_UnitTest','FemalePatientLast_UnitTest',Date.valueOf('1983-10-11')

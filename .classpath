@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="Automation/CICDAutomation.jar"/>
+	<classpathentry kind="lib" path="Build/SFDC_October2019release/Automation/CICDAutomation.jar"/>
+	<classpathentry kind="lib" path="Build/SFDC_October2019release/deploy/ant-salesforce.jar"/>
+	<classpathentry kind="lib" path="deploy/ant-salesforce.jar"/>
+	<classpathentry kind="lib" path="retrieve/ant-salesforce.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

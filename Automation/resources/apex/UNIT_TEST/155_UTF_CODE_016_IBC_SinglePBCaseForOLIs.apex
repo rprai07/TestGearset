@@ -1,0 +1,16 @@
+GHI_UTF_IBCOrderProcessing.createOrder();
+GHI_UTF_IBCOrderProcessing.createOrderRole('Ordering');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_IBCOrderProcessing.createOrderItem('Colon');
+GHI_UTF_IBCOrderProcessing.createOrderItem('DCIS');
+GHI_UTF_IBCOrderProcessing.updateOLI($orderId,0);
+GHI_UTF_IBCOrderProcessing.updateOLI($orderId,1);
+GHI_UTF_IBCOrderProcessing.updateOLI($orderId,2);
+GHI_UTF_IBCOrderProcessing.processOrder($orderId);
+List<Case> cecaselist = [Select Id, CaseNumber, Description, OSM_Primary_Order__c, Type from Case where Type = 'Pre-Billing' AND OSM_Primary_Order__c=:$orderId];
+System.assert(cecaselist.size() == 3);
+List<OrderItem> olis = [Select OSM_Billing_Status__c from OrderItem where OrderId =:$orderId];
+Boolean assertion1 = (olis[0].OSM_Billing_Status__c == 'Pre-Billing Ready');
+Boolean assertion2 = (olis[1].OSM_Billing_Status__c == 'Pre-Billing Ready');
+Boolean assertion3 = (olis[2].OSM_Billing_Status__c == 'Pre-Billing Ready');
+System.assert(assertion1 && assertion2 && assertion3);

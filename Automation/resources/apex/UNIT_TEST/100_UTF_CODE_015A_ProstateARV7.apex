@@ -1,0 +1,18 @@
+GHI_UTF_ProstateARV7OrderProcessing.createOrder();
+GHI_UTF_ProstateARV7OrderProcessing.createOrderRole('Ordering');
+GHI_UTF_ProstateARV7OrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_ProstateARV7OrderProcessing.createOrderRole('Partner');
+GHI_UTF_ProstateARV7OrderProcessing.createOrderRole('Additional Report Receiver');
+GHI_UTF_ProstateARV7OrderProcessing.createOrderRole('Billing');
+GHI_UTF_ProstateARV7OrderProcessing.createOrderRole('Diagnosing');
+GHI_UTF_ProstateARV7OrderProcessing.createOrderItem('Colon');
+GHI_UTF_ProstateARV7OrderProcessing.processOrder($orderId);
+GHI_UTF_ProstateARV7OrderProcessing.closePreBillingCase($orderId);
+GHI_UTF_ProstateARV7OrderProcessing.createPackage($orderId);
+GHI_UTF_ProstateARV7OrderProcessing.closeSpecArrivalCase($orderId);
+GHI_UTF_ProstateARV7OrderProcessing.createSpecimen($orderId);
+GHI_UTF_ProstateARV7OrderProcessing.createResult($orderId);
+GHI_UTF_ProstateARV7OrderProcessing.updateOLIToDVC($orderId);
+Order ord = [Select OrderNumber from Order where id= :$orderId];
+List<ICRT_Message_Log__c> renanddist = [Select Id from ICRT_Message_Log__c where ICRT_Message_Type__c = 'RenderAndDistributeDataMessage' and ICRT_Object_ID__c= :ord.OrderNumber ];
+System.assert(renanddist.size()>0);

@@ -1,0 +1,12 @@
+GHI_UTF_IBCOrderProcessing.createOrder();
+GHI_UTF_IBCOrderProcessing.createOrderRole('Ordering');
+GHI_UTF_IBCOrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_IBCOrderProcessing.processOrder($orderId);
+GHI_UTF_IBCOrderProcessing.closePreBillingCase($orderId);
+GHI_UTF_IBCOrderProcessing.createPackage($orderId);
+GHI_UTF_IBCOrderProcessing.closeSpecArrivalCase($orderId);
+GHI_UTF_IBCOrderProcessing.createSpecimen($orderId);
+GHI_UTF_IBCOrderProcessing.createResult($orderId);
+GHI_UTF_IBCOrderProcessing.updateOLIToDVC($orderId);
+OrderItem oli =[Select OSM_Data_Entry_Status__c from OrderItem where orderId = :$orderId];
+System.assertEquals('Data Verification Complete', oli.OSM_Data_Entry_Status__c);

@@ -1,0 +1,2 @@
+OSM_Billing_Diagnosis_Code__c,OSM_Nodal_Status__c,OSM_PCDx_Stage_Rec_Rel_Ref_Met_or_Adv__c,OSM_PCDx_Clinical_Stage__c,OSM_PCDx_Cancer_Type__c,OSM_PCDx_ER_Status__c,OSM_PCDx_PR_Status__c,OSM_HCP_Provided_IHC_Panel__c,OSM_HCP_Provided_Recommended_Panel__c
+'Other C44.509 skin of other part of trunk','Node Positive (4+ Nodes)','Yes','I','Bladder','Positive High','Positive','ALK','No'

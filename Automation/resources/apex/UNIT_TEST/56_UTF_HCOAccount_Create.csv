@@ -1,0 +1,2 @@
+Name,BillingCountry,BillingStreet,BillingCity,BillingState,BillingPostalCode,OSM_Specialty__c,Phone,OSM_HCO_NPI__c,OSM_Country_Code__c,RecordTypeId,OSM_Status__c
+'Acct123456','USA','123','Redwood City','California','94063','Urology','(650) 556-0122','npi1','US','HCO','Approved'

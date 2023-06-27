@@ -1,0 +1,2 @@
+Name,OSM_Status__c,OSM_Payor_Hierarchy__c,OSM_Payor_Category__c,OSM_Country_Code__c,OSM_Specialty__c,BillingCountry,BillingStreet,BillingCity,BillingState,BillingPostalCode,Phone,Fax,RecordTypeId,OSM_QDX_Billing_ID__c
+'Red John 44','Draft','2','Private' ,'USA','Urology','United States','123','Redwood City','California','94063','987654321','+1650555121212','Payor','BIY-1234' 

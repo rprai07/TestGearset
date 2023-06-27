@@ -1,0 +1,15 @@
+GHI_UTF_ProstateOrderProcessing.createOrder();
+GHI_UTF_ProstateOrderProcessing.createOrderRole('Ordering');
+GHI_UTF_ProstateOrderProcessing.createOrderRole('Specimen Submitting');
+GHI_UTF_ProstateOrderProcessing.processOrder($orderId);
+GHI_UTF_ProstateOrderProcessing.closeSomnCase($orderId);
+GHI_UTF_ProstateOrderProcessing.closePreBillingCase($orderId);
+GHI_UTF_ProstateOrderProcessing.createPackage($orderId);
+GHI_UTF_ProstateOrderProcessing.closeSpecArrivalCase($orderId);
+GHI_UTF_ProstateOrderProcessing.createSpecimen($orderId);
+GHI_UTF_ProstateOrderProcessing.closeClinicalExperienceCase($orderId);
+GHI_UTF_ProstateOrderProcessing.createResult($orderId);
+GHI_UTF_ProstateOrderProcessing.updateOLIToDVC($orderId);
+Order ord = [Select OrderNumber from Order where id= :$orderId];
+List<ICRT_Message_Log__c> renanddist = [Select Id from ICRT_Message_Log__c where ICRT_Message_Type__c = 'RenderAndDistributeDataMessage' and ICRT_Object_ID__c= :ord.OrderNumber ];
+System.assert(renanddist.size()>0);
