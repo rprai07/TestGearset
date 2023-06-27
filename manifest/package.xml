@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>DataFactoryFutureHelper_Test</members>
+        <members>GHI_Portal_Header_Controller</members>
+        <members>GHI_Portal_Header_Controller_Test</members>
+        <members>GHI_Portal_Login_Controller</members>
+        <members>GHI_Portal_OIPExt_Test</members>
+        <members>GHI_Portal_OIP_BillingExt</members>
+        <members>GHI_Portal_OIP_BillingExt_Test</members>
+        <members>GHI_Portal_OIP_PatientExt</members>
+        <members>GHI_Portal_OIP_PatientExt_Test</members>
+        <members>GHI_Portal_OIP_PhysicianExt</members>
+        <members>GHI_Portal_OIP_PhysicianExt_Test</members>
+        <members>GHI_Portal_OIP_ReviewOrderExt</members>
+        <members>GHI_Portal_OIP_ReviewOrderExt_Test</members>
+        <members>GHI_Portal_OIP_SpecimenExt</members>
+        <members>GHI_Portal_OIP_SpecimenExt_Test</members>
+        <members>GHI_Portal_OktaWidget_Controller</members>
+        <members>GHI_Portal_OktaWidget_ControllerTest</members>
+        <members>GHI_Portal_OrderInProgressExt</members>
+        <members>GHI_Portal_Utilities</members>
+        <members>GHI_Portal_Utilities_Test</members>
+        <members>MetaDataService</members>
+        <members>OSM_AccountTATriggerHandler_Test</members>
+        <members>OSM_AgreementApprovalDashboardExt_Test</members>
+        <members>OSM_CaseTriggerHandler</members>
+        <members>OSM_CaseTriggerHandler_Test</members>
+        <members>OSM_CountryBasedPriceListHandler_Test</members>
+        <members>OSM_Custom_OT_Related_ListExt_Test</members>
+        <members>OSM_DefaultPatientAccountforContact_Test</members>
+        <members>OSM_Generate_ODD_OPS_DocTest</members>
+        <members>OSM_OrderLineItemPageLayoutExt_Test</members>
+        <members>OSM_OrderPayLoadComponentController_test</members>
+        <members>OSM_PackageTriggerHandler_Test</members>
+        <members>OSM_PaymentModeController_Test</members>
+        <members>OSM_PortalResultNotificationEmail</members>
+        <members>OSM_PriceListEntriesHandler_Test</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>GHI_Portal_Header</members>
+        <members>GHI_Portal_Okta_Widget</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>GHI_Portal_Login</members>
+        <members>GHI_Portal_OIP_Specimen</members>
+        <members>GHI_Portal_OrderDetails</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Case.Case Assignment Rules V1</members>
+        <name>AssignmentRule</name>
+    </types>
+    <types>
+        <members>Account.OSM_Distributor_Hospital_Code__c</members>
+        <members>Account.OSM_Distributor_Hospital_Name__c</members>
+        <members>Activity.OSM_Case_Owner_Queue__c</members>
+        <members>Case.GHI_Portal_In_Regards_To__c</members>
+        <members>Case.GHI_Portal_Preferred_Contact_Method__c</members>
+        <members>Case.Max_Related_Object_Last_Modified_Date__c</members>
+        <members>Case.OSM_Case_Results__c</members>
+        <members>Case.OSM_Customer_Service_Representative_Bkp__c</members>
+        <members>Case.OSM_Subtype__c</members>
+        <members>Case.OSM_Tumor_Type__c</members>
+        <members>Case.Priority</members>
+        <members>Contact.OSM_Portal_Pilot_Features__c</members>
+        <members>DocusignDataTag__c.Salesforce_Field__c</members>
+        <members>GHI_Portal_Okta__c.Link_HCT_Tab_URL__c</members>
+        <members>GHI_Portal_Settings__c.Production_Host_Name__c</members>
+        <members>GHI_Portal_Test_Selection_Mapping__c.OSM_Orderable__c</members>
+        <members>GHI_Portal_Test_Selection_Mapping__c.Test_Type__c</members>
+        <members>Order.OSM_External_Procedure_Code__c</members>
+        <members>OrderItem.OSM_Prostate_Volume_cc__c</members>
+        <members>Record_Type__c.Current_Release__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>GHI_Portal_EXTRA_Label</members>
+        <members>GHI_Portal_HCT</members>
+        <members>GHI_Portal_OExtra_Test_Type_Label</members>
+        <members>GHI_Portal_OIP_Extra_Full_TO</members>
+        <members>GHI_Portal_OIP_Extra_Molecular_TO</members>
+        <members>GHI_Portal_Oextra_Header_Label</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
+        <members>Feature_System_Flags.HCT_Ordering</members>
+        <members>Organization_Wide_Email_Addresses.OncoExTra_Customer_Service</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>OSM_Genomic_Health_Templates/ExTra_Portal_Notification_of_Result</members>
+        <members>OSM_Genomic_Health_Templates/Portal_ExTra_Order_Confirmation</members>
+        <name>EmailTemplate</name>
+    </types>
+    <types>
+        <members>MDx_Case_Management</members>
+        <members>OSM_Lab_QC_Team</members>
+        <name>Group</name>
+    </types>
+    <types>
+        <members>Account-HCO JP Layout</members>
+        <members>Case-Billing Layout</members>
+        <members>Case-Customer Satisfaction Inquiry</members>
+        <members>Case-Generic</members>
+        <members>Case-Missing Data</members>
+        <members>Case-Order Triage</members>
+        <members>Case-Pre-Billing - Sales Layout</members>
+        <members>Case-Pre-Billing Layout</members>
+        <members>Case-Product Complaint</members>
+        <members>Case-Specimen Arrival</members>
+        <members>Case-Specimen Retrieval</members>
+        <members>Order-Admin Layout</members>
+        <members>Order-Order Layout</members>
+        <members>Order-Pathologist Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>MDx_Case_Management</members>
+        <members>OSM_Lab_QC_Team</members>
+        <name>Queue</name>
+    </types>
+    <types>
+        <members>Case.Customer_Satisfaction_Inquiry</members>
+        <members>Case.OSM_Generic</members>
+        <members>Case.OSM_Lab_Service_Complaints</members>
+        <members>Contact.IntlSFA_HCP_JP</members>
+        <members>Contact.OSM_HCP</members>
+        <members>Contact.OSM_Other</members>
+        <members>Order.GHI_Portal_Order_Layout</members>
+        <members>Order.OSM_Order</members>
+        <members>Task.Integration</members>
+        <members>Task.Task_Domestic</members>
+        <name>RecordType</name>
+    </types>
+    <types>
+        <members>CaseOrigin</members>
+        <name>StandardValueSet</name>
+    </types>
+    <types>
+        <members>GHI_Portal_Logos</members>
+        <members>GHI_Portal_Resources</members>
+        <members>GHI_Portal_Splash_Styles</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+        <members>Order.Portal_ExTra_Order_Confirmation</members>
+        <name>WorkflowAlert</name>
+    </types>
+    <types>
+        <members>EmailMessage.Update_Case_Owner_to_RUL_Queue</members>
+        <name>WorkflowFieldUpdate</name>
+    </types>
+    <types>
+        <members>Case.OSM Oncomaps Email to Cases</members>
+        <members>EmailMessage.OSM_Update_Email_Inquery_On_Closed_Case_CustomerService-PHXMRD</members>
+        <name>WorkflowRule</name>
+    </types>
+    <version>54.0</version>
+</Package>
